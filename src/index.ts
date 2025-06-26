@@ -37,6 +37,43 @@ export interface ReferenceOrderDraftAction {
     draft_actions: DraftAction[];
 }
 
+export interface Agent {
+  id: number;
+  uuid: string;
+  displayName: string;
+  description: string;
+  developerName: string;
+  releaseDate: string; // ISO format
+  displayIcon: string;
+  displayIconSmall: string;
+  bustPortrait: string;
+  fullPortrait: string;
+  fullPortraitV2: string;
+  killfeedPortrait: string;
+  background: string;
+  roleId: number;
+  backgroundGradientColors: string;
+  role: AgentRole;
+  abilities: AgentAbility[];
+}
+
+export interface AgentRole {
+  id: number;
+  uuid: string;
+  displayName: string;
+  description: string;
+  displayIcon: string;
+}
+
+export interface AgentAbility {
+  id: number;
+  agentId: number;
+  slot: string;
+  displayName: string;
+  description: string;
+  displayIcon: string;
+}
+
 export const referenceOrderDraftAction: DraftSession = {
     curent_turn: 0,
     draft_actions: [
