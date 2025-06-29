@@ -16,6 +16,7 @@ export type StateDraft = 'ban' | 'pick';
 export interface Side {
     name: string;
     team_leader: number;
+    isReady: boolean
     agents: number[];
     bans: number[];
 }
