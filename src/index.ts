@@ -1,6 +1,7 @@
 export interface Room {
     id: string;
     uuid: string;
+    timer: NodeJS.Timeout;
     public_link: string;
     map_selected: number;
     state: StateRoom;
@@ -87,6 +88,10 @@ export interface AgentAbility {
   displayName: string;
   description: string;
   displayIcon: string;
+}
+
+export interface SocketError {
+    message: string
 }
 
 export const referenceOrderDraftAction: DraftSession = {
