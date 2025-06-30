@@ -14,6 +14,12 @@ export enum StateRoomGame {
     RUNNING = "running",
     FINISHED = "finished"
 }
+
+export interface ButtonFrontState {
+    title: string;
+    action: () => void;
+}
+
 export type StateRoom = 'waiting' | 'running' | 'finished';
 export type StateDraft = 'ban' | 'pick';
 
