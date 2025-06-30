@@ -4,14 +4,20 @@ export interface Room {
     public_link: string;
     map_selected: number;
     state: StateRoom;
+    creator_id: number;
     spectators: string[];
     attackers_side: Side;
     defenders_side: Side;
 }
-
+export enum StateRoomGame {
+    WAITING = "waiting",
+    RUNNING = "running",
+    FINISHED = "finished"
+}
 export type StateRoom = 'waiting' | 'running' | 'finished';
 export type StateDraft = 'ban' | 'pick';
 
+export type SideTeam = 'attackers_side' | 'defenders_side';
 
 export interface Side {
     name: string;
@@ -150,3 +156,11 @@ export const referenceOrderDraftAction: DraftSession = {
         }
     ],
 }
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+    token?: string;
+    createdAt?: string;
+  }
