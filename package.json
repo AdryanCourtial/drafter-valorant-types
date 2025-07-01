@@ -19,7 +19,8 @@
   "homepage": "https://github.com/AdryanCourtial/drafter-valorant-types#readme",
   "description": "",
   "devDependencies": {
-    "@types/node": "^20.x",
+    "@types/node": "^20.19.2",
+    "typescript": "^5.8.3",
     "undici-types": "^5.28.4"
   }
 }
