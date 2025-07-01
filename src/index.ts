@@ -1,7 +1,6 @@
 export interface Room {
     id: string;
     uuid: string;
-    timer: NodeJS.Timeout;
     public_link: string;
     map_selected: number;
     state: StateRoom;
@@ -134,7 +133,7 @@ export const referenceOrderDraftAction: DraftSession = {
         },
         {
             team: 'defenders_side',
-            type: 'ban',
+            type: 'pick',
             turn: 8
         },
         {
@@ -144,7 +143,7 @@ export const referenceOrderDraftAction: DraftSession = {
         },
         {
             team: 'defenders_side',
-            type: 'pick',
+            type: 'ban',
             turn: 10
         },
         {
