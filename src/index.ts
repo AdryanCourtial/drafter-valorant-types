@@ -5,7 +5,6 @@ export interface Room {
     map_selected: string;
     state: StateRoom;
     creator_id: number;
-    spectators: string[];
     draft_session: DraftSession;
     attackers_side: Side;
     defenders_side: Side;
