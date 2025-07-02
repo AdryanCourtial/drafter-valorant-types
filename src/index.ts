@@ -176,4 +176,7 @@ export interface User {
     email: string;
     token?: string;
     createdAt?: string;
+    drafts?: {
+    uuid: string;
+    }[];
   }
