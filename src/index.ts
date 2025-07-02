@@ -2,7 +2,7 @@ export interface Room {
     id: string;
     uuid: string;
     public_link: string;
-    map_selected: number;
+    map_selected: string;
     state: StateRoom;
     creator_id: number;
     spectators: string[];
@@ -11,6 +11,21 @@ export interface Room {
     defenders_side: Side;
 }
 
+export interface Map {
+  id: number;
+  uuid: string;
+  displayName: string;
+  tacticalDescription: string;
+  coordinates: string;
+  displayIcon: string;
+  listViewIcon: string;
+  listViewIconTall: string;
+  splash: string;
+  stylizedBackgroundImage: string;
+  premierBackgroundImage: string;
+}
+
+
 export enum StateRoomGame {
     WAITING = "waiting",
     RUNNING = "running",
@@ -18,8 +33,8 @@ export enum StateRoomGame {
 }
 
 export interface ButtonFrontState {
-    title: string;
-    action: () => void;
+    title?: string;
+    action?: () => void;
 }
 
 export type StateRoom = 'waiting' | 'running' | 'finished';
