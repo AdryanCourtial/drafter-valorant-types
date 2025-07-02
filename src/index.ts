@@ -48,6 +48,7 @@ export interface Side {
     isReady: boolean
     agents: Array<Agent | null>;
     bans: Array<Agent | null>;
+    winRate?: number;
 }
 
 export interface DraftAction {
