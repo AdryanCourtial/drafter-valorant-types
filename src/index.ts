@@ -193,5 +193,6 @@ export interface User {
     createdAt?: string;
     drafts?: {
     uuid: string;
+    createdAt: string;
     }[];
   }
